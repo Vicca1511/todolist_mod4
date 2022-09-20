@@ -1,4 +1,5 @@
 import "./App.css";
+import {Form} from "./components/Form/Form";
 
 
 function App() {
@@ -6,8 +7,8 @@ function App() {
     <div className="App">
       <div className="App__card">
      
-       Eu sou o Unico componente
-       
+       <Form />
+
       </div>
     </div>
   );

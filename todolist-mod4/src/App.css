@@ -2,11 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  margin-top: 10rem;
+  
   
 } 
  .App__card {
+  display: flex;
+  justify-content: center;
   width: 100%;
   align-items: center;
+  font-size: 2rem;
   
 }
