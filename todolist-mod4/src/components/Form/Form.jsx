@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Form.css';
+import { Card } from'./Card/Card'
 
  export function Form (){
 
@@ -12,7 +13,10 @@ import './Form.css';
     }
     console.log(newAnime);
     return(
+        
         <div className='form'>
+            
+            <Card/>
             <form className= "form__card" onSubmit={handleForm}>
                 <section>
                     <div>

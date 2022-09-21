@@ -1,22 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(118, 118, 210);
+ }
 
+html , body, #root{
+  background-color: aquamarine;
   
 }
 
-
-
-html , body{
-  display:flex ;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-body, #root {
-  width: 100%;
-}
 

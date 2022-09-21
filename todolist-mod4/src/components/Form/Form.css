@@ -1,16 +1,41 @@
-.form{
+.form__card{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border:2px solid #fac;
+    border-radius: 5px;
+    padding: 15px 5px 15px 5px;
+    margin: 10px;
+
 }
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fac;
+    font-size: 1.5rem;
+}
+
 
 .btn__submit {
  
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 13px;
+    padding: 3px;
+    border: 2px solid #fac;
+    background-color: blueviolet;
+}
+input{ 
+    display: flex;
+    justify-content: flex-start;
     margin: 3px;
     padding: 3px;
-    font-size: 2rem;
+    border: 2px solid #fac;
 }
+
+
