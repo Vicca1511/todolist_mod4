@@ -5,6 +5,11 @@
 
 html , body, #root{
   background-color: aquamarine;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   
 }
 
