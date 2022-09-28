@@ -9,8 +9,12 @@
  .App__card {
   display: flex;
   justify-content: center;
-  width: 100%;
+  flex-wrap: wrap;
+  width: 80%;
   align-items: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   
+}
+.Card__container {
+  display: flex;
 }
