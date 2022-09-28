@@ -16,7 +16,7 @@ span{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fac;
+    color: rgb(82, 180, 232);
     font-size: 1.5rem;
 }
 
@@ -26,11 +26,12 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    width: 80%;
     margin: 13px;
     padding: 3px;
-    border: 2px solid #fac;
-    background-color: blueviolet;
+    border: 3px solid #fac;
+    background-color: rgb(161, 84, 233);
+    cursor: pointer;
 }
 input{ 
     display: flex;

@@ -2,13 +2,17 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: orangered;
+    background-color: rgb(149, 33, 221);
     align-items: center;
     justify-content: center;
-    border: 1.6px solid rgb(21, 21, 21);
     border-radius: 8px;
     margin: 10px;
+    color:rgb(0, 255, 208);
   
+}
+.card__title {
+    font-size: 1.8rem;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .card__item{
@@ -18,4 +22,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color:black
+}
+.card__span{
+    padding: 3px;
+    margin: 1px;
+    color:rgb(0, 255, 208);
 }
