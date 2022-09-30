@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.modal__button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+
+}
