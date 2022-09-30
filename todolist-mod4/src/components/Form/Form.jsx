@@ -1,13 +1,18 @@
 import { useState } from "react";
+import { api } from "../../utils/api/api"
 import "./Form.css";
 
-export function Form() {
+export function Form({getAll, handleModal}) {
   const [newAnime, setNewAnime] = useState();
 
-  function handleForm(event) {
+  async function handleForm(event) {
     event.preventDefault();
 
     setNewAnime({ ...newAnime, characters: [] });
+
+    await api.createAnime(newAnime);
+    
+
   }
   
   return (
