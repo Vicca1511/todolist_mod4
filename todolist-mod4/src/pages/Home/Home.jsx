@@ -1,7 +1,8 @@
 import "./Home.css";
+import { useState, useEffect } from "react";
 import { Card } from "../.././components/Card/Card";
 import { api } from "../.././utils/api/api";
-import { useState, useEffect } from "react";
+import { Header } from "../../Header/Header";
 import {MdOutlineCloseFullscreen} from "react-icons/md"
 import Modal from "react-modal";
 
@@ -48,7 +49,9 @@ export function Home() {
   }, []);
 
   return (
+    
     <>
+      <Header />
       <div className="Card__container">
         {animesList.map((item, index) => {
           return (

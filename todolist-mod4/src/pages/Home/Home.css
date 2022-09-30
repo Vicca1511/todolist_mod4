@@ -4,6 +4,8 @@
 }
 h2 {
     font-size: 5rem;
+    color: blueviolet;
+    text-decoration: underline;
 }
 .card {
     border: none !important;
