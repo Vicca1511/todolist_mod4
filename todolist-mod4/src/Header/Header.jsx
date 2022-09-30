@@ -2,7 +2,7 @@ import Modal from "react-modal";
 import { useState } from "react";
 import { GrFormAdd } from "react-icons/gr";
 import { Form } from "../components/form/form";
-import "./header.css";
+import "./Header.css";
 
 const customStyles = {
   content: {
@@ -30,11 +30,12 @@ export function Header({ getAll }) {
     setModalIsOpen(!modalIsOpen);
   }
 
+  
   return (
     <>
       <header className="header">
-       <section>
-          <button className="modal__button" onClick={handleModal}>
+       <section className="header__section">
+          <button className="modal__button" onClick={handleModal} >
             <GrFormAdd size={28} /> Add Anime
           </button>
         </section>

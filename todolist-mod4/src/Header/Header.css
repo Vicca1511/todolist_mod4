@@ -3,7 +3,7 @@
     padding: 0;
 
 }
-.modal__button{
+button{
     display:flex;
     align-items: center;
     justify-content: center;

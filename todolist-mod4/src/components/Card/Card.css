@@ -2,12 +2,14 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: rgb(149, 33, 221);
+    background-color: rgb(234, 124, 144);
     align-items: center;
     justify-content: center;
     border-radius: 8px;
     margin: 10px;
-    color:rgb(0, 255, 208);
+    width: 18rem;
+    height: 23rem;
+    
   
 }
 .card__title {
@@ -22,10 +24,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:black
+    color:rgb(237, 245, 2);
+    font-size: 1.3rem;
 }
 .card__span{
     padding: 3px;
     margin: 1px;
-    color:rgb(0, 255, 208);
+    color:rgb(13, 14, 13);
 }
