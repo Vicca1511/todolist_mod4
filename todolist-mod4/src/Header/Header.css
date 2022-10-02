@@ -1,13 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
 
-}
 button{
     display:flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: rgb(140, 89, 185);
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow: .3rem .2rem .1rem 0 rgba(252, 251, 251, 0.2);
     
 
 }
