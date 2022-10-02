@@ -11,14 +11,6 @@
     width: 80%;
 
 }
-span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: rgb(153, 0, 248);
-    font-size: 1.5rem;
-}
 
 
 .btn__submit {
@@ -38,7 +30,7 @@ input{
     justify-content: flex-start;
     margin: 3px;
     padding: 3px;
-    border: 2px solid #fac;
+    border: 2px solid rgb(176, 3, 72);
 }
 
 

@@ -32,10 +32,10 @@ export function Header({ getAll , handleModal}) {
 
   return (
     <>
-      <header className="header">
+      <header className="header">Anime Editor
         <section className="header__section">
           <button className="modal__button" onClick={handleModal}>
-            <GrFormAdd size={28} /> Add Anime
+            <GrFormAdd size={28} />New Anime
           </button>
         </section>
       </header>

@@ -5,7 +5,7 @@
 
 html, #hoot {
     width: 100%;
-    background-color: rgb(37, 121, 142);
+    background-image: repeating-radial-gradient(rgb(238, 118, 118), rgb(255, 255, 129) 10%, rgb(148, 216, 148) 15%);
     display: flex;
     justify-content: center;
     align-items: center;

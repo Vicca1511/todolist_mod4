@@ -2,7 +2,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: rgb(175, 234, 124);
+    background: radial-gradient( rgb(202, 202, 195) 15%, rgb(119, 118, 118) 60%);
     align-items: center;
     justify-content: center;
     border-radius: 8px;
