@@ -1,0 +1,19 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+html, #hoot {
+    width: 100%;
+    background-color: rgb(37, 121, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
