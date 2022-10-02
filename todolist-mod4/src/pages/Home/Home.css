@@ -28,3 +28,16 @@ h2 {
     color: darkviolet;
     
 }
+.section__modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0 10px 0;
+    padding: 0.7rem;
+}

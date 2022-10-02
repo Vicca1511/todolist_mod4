@@ -1,10 +1,10 @@
-import "./Home.css";
-import { useState, useEffect } from "react";
 import { Card } from "../.././components/Card/Card";
 import { api } from "../.././utils/api/api";
 import { Header } from "../../Header/Header";
+import { useState, useEffect } from "react";
 import {MdOutlineCloseFullscreen} from "react-icons/md"
 import Modal from "react-modal";
+import "./Home.css";
 
 const customStyles = {
   content: {
@@ -31,14 +31,30 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 export function Home() {
-  const [animesList, setAnimesList] = useState([]);
+  const [animesList, setAnimeList] = useState([]);
   const [modalIsOpen, setmodalIsOpen] = useState(false);
   const [oneAnime, setOneAnime] = useState({});
 
   async function getAnimes() {
     const animes = await api.getAllAnimes();
-    setAnimesList(animes);
+    setAnimeList(animes);
   }
+
+  function deleteAnime(animeId) {
+    api.deleteAnime(animeId);
+    const newAnimeList = animesList;
+    newAnimeList.map((anime, index) => {
+      if (anime.id === animeId) {
+        newAnimeList.splice(index, 1);
+        setAnimeList(newAnimeList);
+        handleModal();
+      }
+    });
+  }
+
+  // async function editAnime(anime) {
+  //   const animeEdited = await api.editAnime()
+  // }
 
   function handleModal() {
     setmodalIsOpen(!modalIsOpen);
@@ -51,7 +67,7 @@ export function Home() {
   return (
     
     <>
-      <Header />
+      <Header getAll={getAnimes} />
       <div className="Card__container">
         {animesList.map((item, index) => {
           return (
@@ -79,7 +95,7 @@ export function Home() {
         style={customStyles}
         contentLabel="Card structure"
       >
-        <section>
+        <section className="section__modal">
           <section style={{
             display:"flex",
             alignItems: "center",
@@ -100,6 +116,21 @@ export function Home() {
             <li className="card__listItem">{oneAnime.year}</li>
             
           </ul>
+          <button style={{
+              cursor:"pointer",
+              backgroundColor: "Green",
+              color: "white",
+            }} onClick={()=>{
+              updateAnime(oneAnime.id)
+            }}>Edit</button>
+          <button style={{
+              cursor:"pointer",
+              backgroundColor: "Red",
+              color: "white",
+            }}onClick={() =>{
+            deleteAnime(oneAnime.id)
+            handleModal();
+          }}>Delete</button>
         </section>
       </Modal>
     </>
