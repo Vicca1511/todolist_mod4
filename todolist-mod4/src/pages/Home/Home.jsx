@@ -34,6 +34,7 @@ export function Home() {
   const [animesList, setAnimeList] = useState([]);
   const [modalIsOpen, setmodalIsOpen] = useState(false);
   const [oneAnime, setOneAnime] = useState({});
+  const [modalEdit , setModalEdit] = useState(false);
 
   async function getAnimes() {
     const animes = await api.getAllAnimes();
@@ -51,13 +52,33 @@ export function Home() {
       }
     });
   }
-
-  // async function editAnime(anime) {
-  //   const animeEdited = await api.editAnime()
-  // }
-
   function handleModal() {
     setmodalIsOpen(!modalIsOpen);
+  }
+
+  async function updateAnime(e , animeId) {
+    e.preventDefault();
+
+    const anime = {
+      title: e.target.title.value,
+      protagonist: e.target.protagonist.value,
+      gender: e.target.gender.value,
+      year: e.target.year.value,
+      characters: [],
+    };
+    
+    const newAnimeList = animesList;
+    newAnimeList.map((item, index) => {
+      if (item.id === animeId) {
+        console.log(item)
+        newAnimeList.splice(index , 1 , item);
+        setAnimeList(newAnimeList);
+        handleModal();
+      }
+      
+    });
+    setModalEdit(false);
+
   }
 
   useEffect(() => {
@@ -94,7 +115,53 @@ export function Home() {
         onRequestClose={handleModal}
         style={customStyles}
         contentLabel="Card structure"
-      >
+      >{modalEdit? 
+        <form className="form__card" onSubmit={updateAnime}>
+        <section>
+          <div>
+            <span>Title:</span>
+            <input
+              type="text"
+              name="title"
+              defaultValue={oneAnime.title}
+            ></input>
+          </div>
+        </section>
+        <section>
+          <div>
+            <span>Protagonist:</span>
+            <input
+              type="text"
+              name="protagonist"
+              defaultValue={oneAnime.protagonist}
+            ></input>
+          </div>
+        </section>
+        <section>
+          <div>
+            <span>Gender:</span>
+            <input
+              type="text"
+              name="gender"
+              defaultValue={oneAnime.gender}
+            ></input>
+          </div>
+        </section>
+        <section>
+          <div>
+            <span>Year:</span>
+            <input
+              type="number"
+              name="year"
+              defaultValue={oneAnime.year}
+            ></input>
+          </div>
+          <button type="submit" className="btn__submit">
+            SUBMIT{" "}
+          </button>
+        </section>
+      </form>
+        :
         <section className="section__modal">
           <section style={{
             display:"flex",
@@ -121,7 +188,7 @@ export function Home() {
               backgroundColor: "Green",
               color: "white",
             }} onClick={()=>{
-              updateAnime(oneAnime.id)
+              setModalEdit(true);
             }}>Edit</button>
           <button style={{
               cursor:"pointer",
@@ -131,7 +198,7 @@ export function Home() {
             deleteAnime(oneAnime.id)
             handleModal();
           }}>Delete</button>
-        </section>
+        </section>}
       </Modal>
     </>
   );
