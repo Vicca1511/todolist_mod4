@@ -16,6 +16,9 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
     backgroundColor: " rgba(0, 0, 0, 0.8)",
     borderRadius: "15px",
+    color: "white",
+    textAlign: "center",
+    
   },
   overlay: {
     background: "rgba(0, 0, 0, 0.4)",
@@ -24,6 +27,7 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 export function Header({ getAll , handleModal}) {
+  
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function handleModal() {

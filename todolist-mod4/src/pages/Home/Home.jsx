@@ -19,6 +19,7 @@ const customStyles = {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     transform: "translate(-50%, -50%)",
     textAlign: "center",
+    color: "white",
     
     
   },
@@ -56,7 +57,7 @@ export function Home() {
     setmodalIsOpen(!modalIsOpen);
   }
 
-  async function updateAnime(e , animeId) {
+  async function updateAnime( e , animeId) {
     e.preventDefault();
 
     const anime = {
@@ -115,8 +116,8 @@ export function Home() {
         onRequestClose={handleModal}
         style={customStyles}
         contentLabel="Card structure"
-      >{modalEdit? 
-        <form className="form__card" onSubmit={updateAnime}>
+      >{modalEdit ? 
+        <form className="form__card" onSubmit={updateAnime()}>
         <section>
           <div>
             <span>Title:</span>
@@ -156,7 +157,7 @@ export function Home() {
               defaultValue={oneAnime.year}
             ></input>
           </div>
-          <button type="submit" className="btn__submit">
+          <button type="submit" className="btn__submit " >
             SUBMIT{" "}
           </button>
         </section>

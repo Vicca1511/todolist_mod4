@@ -14,7 +14,9 @@
 }
 .card__title {
     font-size: 1.8rem;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(111, 24, 224);
+    
 }
 
 .card__item{
@@ -30,6 +32,6 @@
 .card__span{
     padding: 3px;
     margin: 1px;
-    color:rgb(24, 48, 224);
+    color:rgb(111, 24, 224);
     font-size: 2rem;
 }

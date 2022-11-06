@@ -2,7 +2,7 @@ import { useState } from "react";
 import { api } from "../../utils/api/api";
 import "./Form.css";
 
-export function Form({ getAll, handleModal }) {
+export function Form ({ getAll, handleModal }) {
   const [newAnime, setNewAnime] = useState({ characters: [] });
 
   async function handleForm(event) {
